@@ -1,7 +1,420 @@
-* {
-  box-sizing: border-box;
+* { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
 }
-
 body {
   margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: #111;
+  color: #ccc;
+}
+
+/*MAIN*/
+main{
+  position: relative;
+  margin-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/*HEADER*/
+.header{
+  z-index: 1;
+
+  width: 100%;
+  height: 100px;
+  padding: 0px 24px;
+  background-color: #999;
+
+  position: fixed;
+  top: 0px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-title{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.header-title-img{
+  max-width: 50px;
+}
+.header-title-text{
+  padding-left: 16px;
+}
+.header-nav{
+  width: 50%;
+  margin: 0;
+  padding: 24px 0px;
+}
+.header-nav-list{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: baseline;
+
+  list-style-type: none;
+}
+.header-nav-list-item{
+  padding: 8px 16px;
+  border-left: 2px solid #111;
+}
+.header-nav-list :nth-child(1) {
+  border: 0px;
+}
+.header-nav-list :last-child {
+  padding-right: 0px;
+}
+
+/*INTRO*/
+.wrapper-intro{
+  width: 100%;
+  height: 80vh;
+  margin: 0;
+  padding: 24px;
+
+  position: static;
+  top: 300px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: baseline;
+
+  background-image: url(images/tiger-head-black.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.wrapper-intro-title{
+  max-width: 50%;
+  padding: 24px
+}
+
+/*MYTHOLOGY AND SYMBOLISM - Section 1*/
+.wrapper-myth{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0px;
+}
+.wrapper-myth-section{
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+.wrapper-myth-img{
+  max-width: 50%;
+  height: auto;
+  float: right;
+  padding: 24px;
+}
+.wrapper-myth-text{
+  max-width: 50%;
+  float: left;
+  padding: 24px;
+}
+
+/*LUCKY LINKS - Section 2*/
+.wrapper-lucky{
+  width: 100%;
+  height: auto;
+  padding-top: 100px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: start;
+}
+.wrapper-lucky-section{
+  width: 100%;
+  height: 300px;
+  padding: 0px 48px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: start;
+}
+.wrapper-lucky-section-block{
+  margin: 0;
+  padding: 24px;
+  width: 33%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+
+  border-left: 2px solid #999;
+  color: #999;
+
+  list-style-type: none;
+}
+/*HOW - Section 3*/
+.wrapper-how{
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0px;
+  padding-top: 100px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+}
+.wrapper-how-text{
+  max-width: 50%;
+  height: auto;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: baseline;
+}
+.wrapper-how-img{
+  width: auto;
+  height: 600px;
+  margin: 0 auto;
+}
+
+/*FOOTER*/
+footer{
+  margin: 0;
+  width: 100%;
+  height: 100px;
+  padding: 24px;
+
+  position: relative;
+  bottom: 0px;
+
+  background-color: #444;
+}
+
+/*STYLE*/
+h1{
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0px;
+}
+h2{
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0px;
+}
+h3{
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0px;
+}
+p{
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0px;
+}
+.section-title{
+  width: 100%;
+  margin: 0;
+  padding: 24px;
+
+  position: sticky;
+  top: 100px;
+
+  background-color: #111;
+  border-top: 2px solid #999;
+}
+
+/*LINKS*/
+a{
+  text-decoration: none;
+  font-size: 16px;
+  color: #111;
+}
+a:hover {
+  font-style: oblique;
+  text-decoration: underline;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 600px){
+
+  /*MAIN*/
+  main{
+    margin-top: 147px;
+  }
+
+  /*HEADER*/
+  .header{
+    height: auto;
+    padding: 8px;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-title{
+    width: 100%;
+    height: 50px;
+    padding: 0px;
+  }
+  .header-title-img{
+    height: 30px;
+  }
+  .header-title-text{
+    padding: 8px;
+  }
+  .header-nav{
+    width: 100%;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  .header-nav-list{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .header-nav-list-item {
+    padding: 4px 8px;
+    border: none;
+  }
+
+  /*INTRO*/
+  .wrapper-intro{
+    align-content: flex-start;
+    padding: 8px;
+  }
+  .wrapper-intro-title{
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  /*MYTHOLOGY AND SYMBOLISM - Section 1*/
+  .wrapper-myth{
+    padding-top: 147px;
+    height: auto;
+  }
+  .wrapper-myth-section{
+    width: 100%;
+    height: auto;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapper-myth-img{
+    max-width: 100%;
+    float: none;
+    padding: 16px;
+  }
+  .wrapper-myth-text{
+    max-width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+
+  /*LUCKY LINKS - Section 2*/
+  .wrapper-lucky{
+    height: auto;
+    padding-top: 147px;
+
+    flex-direction: column;
+  }
+  .wrapper-lucky-section{
+    height: auto;
+    padding: 16px;
+
+    flex-direction: column;
+  }
+  .wrapper-lucky-section-block{
+    width: 100%;
+    padding: 16px;
+
+    border-top: 2px solid #999;
+    border-left: none;
+  }
+
+  /*HOW - Section 3*/
+  .wrapper-how{
+    width: 100%;
+    height: auto;
+    padding-top: 147px;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapper-how-text{
+    max-width: 100%;
+    padding: 16px;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .wrapper-how-img{
+    width: 100%;
+    height: auto;
+  }
+
+  /*FOOTER*/
+  footer{
+    height: auto;
+    padding: 16px;
+  }
+
+  /*STYLE*/
+  h1{
+    font-size: 24px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  h3{
+    font-size: 16px;
+  }
+  p{
+    font-size: 16px;
+  }
+  .section-title{
+    padding: 16px;
+  }
 }
